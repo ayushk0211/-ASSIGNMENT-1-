@@ -1,0 +1,28 @@
+5. Analysis of an Open Source C Calculator Project
+Project Chosen: Simple Calculator in C
+
+Code Structure Overview:
+
+Input Method:
+The program prompts the user to input an operator and two operands. It uses scanf() to read the operator as a character and the two numbers as double values.
+
+c
+Copy
+Edit
+printf("Enter an operator (+, -, *, /): ");
+scanf(" %c", &op);
+printf("Enter two operands: ");
+scanf("%lf %lf", &n1, &n2);
+Control Flow:
+A switch-case structure is used to determine the arithmetic operation to perform based on the operator character. Each case executes the corresponding operation and prints the result.
+
+c
+Copy
+Edit
+switch(op) {
+    case '+': printf("%.1lf", n1 + n2); break;
+    case '-': printf("%.1lf", n1 - n2); break;
+    case '*': printf("%.1lf", n1 * n2); break;
+    case '/': printf("%.1lf", n1 / n2); break;
+    default: printf("Error! Operator not correct");
+}
